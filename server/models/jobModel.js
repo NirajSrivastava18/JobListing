@@ -9,7 +9,7 @@ const JobListing = new mongoose.Schema(
     logoUrl: {
       type: String,
     },
-    jobPostion: {
+    jobPosition: {
       type: String,
       required: [true, 'JobPostion is required'],
     },

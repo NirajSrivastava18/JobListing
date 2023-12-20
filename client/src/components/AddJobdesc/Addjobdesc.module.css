@@ -1,0 +1,112 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  /* margin: 140px; */
+  /* margin-top: 20px; */
+  margin-left: 80px;
+  margin-bottom: 0px;
+}
+.heading h2 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 144.023%;
+  margin-bottom: 10px;
+}
+
+.InputContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.InputContainer label {
+  color: #000;
+  margin-right: 20px;
+  margin-top: 3px;
+  font-size: 18.335px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.InputContainer input {
+  width: 438.233px;
+  height: 28.668px;
+  border-radius: 3px;
+  border: 2px solid #c2c2c2;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+input::placeholder {
+  color: #adadad;
+}
+
+.error {
+  height: 0;
+  width: 220px;
+  color: #f00;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  display: block;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 0 0 5px;
+  position: relative;
+  bottom: 20px;
+  left: 190px;
+}
+
+textarea {
+  width: 438.233px;
+  height: 60.668px;
+  border-radius: 5px;
+  border: 2px solid #c2c2c2;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 15.651px;
+  resize: none;
+}
+textarea::placeholder {
+  color: #adadad;
+  font-weight: 500;
+}
+
+.ButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+  left: 160px;
+  bottom: 5px;
+  cursor: pointer;
+}
+
+.cancel {
+  width: 146.788px;
+  height: 42.663px;
+  border-radius: 6.508px;
+  border: 0.848px solid #cecece;
+  background: #fff;
+  color: #c2c2c2;
+  font-size: 18.077px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.Submit {
+  width: 146.788px;
+  height: 42.663px;
+  border-radius: 6.508px;
+  background: #ed5353;
+  color: #fff;
+  font-size: 18.077px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 0;
+}

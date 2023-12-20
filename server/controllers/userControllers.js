@@ -37,6 +37,7 @@ const register = async (req, res, next) => {
       status: 'Failed',
       message: 'something went wrong',
     });
+    console.log(error);
   }
 };
 
@@ -63,6 +64,7 @@ const login = async (req, res) => {
         });
       }
     } else {
+      res.status(404);
       res.json({
         status: 'Failed',
         message: 'User Not Found',

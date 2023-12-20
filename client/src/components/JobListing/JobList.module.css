@@ -1,0 +1,80 @@
+.JobsContainer {
+  position: relative;
+  width: 80%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 150px;
+  padding: 2em 0;
+}
+
+.SearchContainer {
+  padding: 10px 10%;
+  width: 100%;
+  height: 30vh;
+  background: #fff;
+  box-shadow: 0px 0px 22px 4px rgba(255, 32, 32, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.searchBar {
+  border: 1.8px solid #e3e3e3;
+  border-radius: 9px;
+  display: flex;
+  margin: 10px auto 2em;
+  padding: 0 1.5em;
+  width: 946px;
+  height: 38px;
+}
+
+.searchBar img {
+  transform: scale(0.7);
+}
+
+.searchBar input {
+  height: 2.5em;
+  width: 50%;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+.skillsDropdown {
+  display: flex;
+  height: 100%;
+}
+.FilterOptionContainer {
+  position: relative;
+  left: -300px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50vw;
+}
+.SkillsOptions {
+  position: relative;
+  left: 280px;
+  width: 80vh;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* .AddsjobButton {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+} */
+
+.AddjobButton {
+  position: relative;
+  top: 20px;
+  left: 290px;
+  width: 182px;
+  height: 52.897px;
+  font-size: 22.414px;
+  border-radius: 8.069px;
+  background: #ed5353;
+  color: #fff;
+}

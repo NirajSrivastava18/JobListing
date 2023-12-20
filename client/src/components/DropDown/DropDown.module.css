@@ -1,0 +1,43 @@
+.Dropdown {
+  width: 30%;
+  height: 28.668px;
+  display: flex;
+
+  flex-direction: column;
+  border: #cecece 2px solid;
+  border-radius: 3px;
+  padding: 0.2em;
+  position: relative;
+  right: 260px;
+  margin-bottom: 20px;
+}
+
+.DropdownButton {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  font-size: 1em;
+  justify-content: space-between;
+  align-items: center;
+  color: #827e7e;
+}
+.DropdownButton img {
+  margin-left: 0.5em;
+}
+
+.DropdownOption {
+  background-color: #f4f4f4;
+  list-style: none;
+  font-size: 0.8em;
+  padding: 0.3em;
+  width: 100%;
+  z-index: 2;
+  border: 1px solid #000;
+}
+.DropdownOption li {
+  width: 100%;
+  padding: 0.3em;
+  cursor: pointer;
+}

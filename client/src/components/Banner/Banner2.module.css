@@ -1,0 +1,19 @@
+.container {
+  background-image: url(../../assets/Banner.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  width: 696.468px;
+  height: 100vh;
+  float: left;
+}
+
+.heading {
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  margin-top: 20px;
+  line-height: 144.023%;
+}

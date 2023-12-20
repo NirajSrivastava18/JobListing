@@ -4,12 +4,15 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const userRoute = require('./routes/userRoute');
 const jobRoute = require('./routes/jobRoute');
+const cors = require('cors');
 
 dotenv.config();
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 app.use('/', userRoute);
 app.use('/', jobRoute);
 

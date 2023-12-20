@@ -1,0 +1,63 @@
+.navbar {
+  height: 15vh;
+  border-radius: 0px 0px 62px 55px;
+  background: #ed5353;
+  color: #fff;
+  display: flex;
+  padding: 0 5%;
+  overflow: hidden;
+  position: relative;
+}
+
+.NavItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 3;
+}
+.RightnavItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  gap: 1em;
+}
+.rect1 {
+  z-index: 2;
+  position: absolute;
+  bottom: 0%;
+  left: -2%;
+}
+.rect2 {
+  z-index: 2;
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.rect3 {
+  z-index: 2;
+  transform: scale(0.8);
+  position: absolute;
+  bottom: -15%;
+  right: 2%;
+}
+
+.loginbutton {
+  width: 123px;
+  height: 46px;
+  border-radius: 7px;
+  border: 2px solid #fff;
+  background: #ff6b6b;
+  font-size: 23px;
+}
+
+.registerbutton {
+  width: 123px;
+  height: 46px;
+  border-radius: 7px;
+  background: #fff;
+  color: #ed5353;
+  font-size: 23px;
+}

@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 140px;
+  margin-top: 90px;
+  margin-left: 160px;
+  margin-bottom: 0px;
+}
+.heading h2 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 144.023%;
+}
+.heading p {
+  color: #525252;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 144.023%;
+}
+
+input {
+  display: flex;
+  flex-direction: column;
+  width: 535px;
+  height: 54px;
+  border-radius: 5px;
+  border: 2px solid #c2c2c2;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+input::placeholder {
+  font-size: 15px;
+  color: #525252;
+  font-weight: 500;
+}
+
+input[type='checkbox'] {
+  display: inline-block;
+  width: 15px;
+  height: 11.494px;
+  margin: 0;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 277px;
+  height: 63.923px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background: #ed5353;
+  color: #fff;
+  text-align: center;
+  font-size: 25.793px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 144.023%; /* 40.028px */
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #000;
+  font-weight: bold;
+}
+.errormessage {
+  height: 0;
+  width: 220px;
+  color: #f00;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 0 0 5px;
+  position: relative;
+  bottom: 20px;
+}

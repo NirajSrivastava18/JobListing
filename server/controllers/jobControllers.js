@@ -5,7 +5,7 @@ const addJob = async (req, res, next) => {
     const {
       companyName,
       logoUrl,
-      jobPostion,
+      jobPosition,
       monthlySalary,
       jobType,
       remoteOrOffice,
@@ -18,7 +18,7 @@ const addJob = async (req, res, next) => {
     if (
       !companyName ||
       !logoUrl ||
-      !jobPostion ||
+      !jobPosition ||
       !monthlySalary ||
       !jobType ||
       !remoteOrOffice ||
@@ -41,7 +41,7 @@ const addJob = async (req, res, next) => {
       const newJobListing = new Job({
         companyName,
         logoUrl: updatedlogoUrl,
-        jobPostion,
+        jobPosition,
         monthlySalary,
         jobType,
         remoteOrOffice,
@@ -113,7 +113,7 @@ const updateJob = async (req, res) => {
       } else {
         (jobListing.companyName = companyName),
           (jobListing.logoUrl = updatedlogoUrl),
-          (jobListing.jobPostion = jobPostion),
+          (jobListing.jobPosition = jobPosition),
           (jobListing.monthlySalary = monthlySalary),
           (jobListing.jobType = jobType),
           (jobListing.remoteOrOffice = remoteOrOffice),
@@ -143,7 +143,7 @@ const filterJob = async (req, res) => {
 
     const filter = {};
     if (skills) filter.skillsRequired = { $in: skills.split(',') };
-    if (search) filter.jobPostion = new RegExp(search, 'i');
+    if (search) filter.jobPosition = new RegExp(search, 'i');
 
     const jobs = await Job.find(filter);
     console.log(jobs);
