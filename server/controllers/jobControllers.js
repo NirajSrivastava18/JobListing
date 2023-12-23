@@ -70,7 +70,7 @@ const updateJob = async (req, res) => {
     const {
       companyName,
       logoUrl,
-      jobPostion,
+      jobPosition,
       monthlySalary,
       jobType,
       remoteOrOffice,
@@ -83,7 +83,7 @@ const updateJob = async (req, res) => {
     if (
       !companyName ||
       !logoUrl ||
-      !jobPostion ||
+      !jobPosition ||
       !monthlySalary ||
       !jobType ||
       !remoteOrOffice ||
@@ -139,11 +139,11 @@ const updateJob = async (req, res) => {
 
 const filterJob = async (req, res) => {
   try {
-    const { skills, search } = req.query;
+    const { skills, searchTerms } = req.query;
 
     const filter = {};
     if (skills) filter.skillsRequired = { $in: skills.split(',') };
-    if (search) filter.jobPosition = new RegExp(search, 'i');
+    if (searchTerms) filter.jobPosition = new RegExp(searchTerms, 'i');
 
     const jobs = await Job.find(filter);
     console.log(jobs);

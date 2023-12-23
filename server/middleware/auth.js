@@ -1,17 +1,19 @@
+const express = require('express');
+const User = require('../models/userModel');
 const jwt = require('jsonwebtoken');
 
 const isLoggedIn = async (req, res, next) => {
+  const token = req.header('Authorization')?.replace('Bearer ', '');
+
   try {
-    const { jwttoken } = req.headers;
-    const user = jwt.verify(jwttoken, process.env.JWT);
+    const decodedToken = jwt.verify(token, process.env.JWT);
+    const user = await User.findById(decodedToken?._id);
+
     req.user = user;
-    return next();
-  } catch (err) {
-    res.json({
-      status: 'FAILED',
-      message: "You've not logged in! Please login",
-    });
-    return;
+    next();
+  } catch (error) {
+    throw new ApiError(401, error?.message || 'Invalid access token');
   }
 };
+
 module.exports = { isLoggedIn };

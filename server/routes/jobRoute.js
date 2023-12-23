@@ -13,8 +13,8 @@ router.post('/addjob', isLoggedIn, addJob);
 
 router.put('/updatejob/:id', isLoggedIn, updateJob);
 
-router.get('/job', isLoggedIn, filterJob);
+router.get('/job', filterJob);
 
-router.get('/job/:id', isLoggedIn, getJob);
+router.get('/job/:id', getJob);
 
 module.exports = router;

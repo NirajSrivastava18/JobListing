@@ -47,6 +47,7 @@ const Addjob = () => {
   useEffect(() => {
     if (token) {
       setAuthorization(true);
+      console.log(token);
     }
   }, [token]);
 
@@ -98,12 +99,11 @@ const Addjob = () => {
       console.log(jobIdToUpdate);
       axios
         .get(`http://localhost:5000/job/${jobIdToUpdate}`)
-        .then((res) => res.json())
         .then((data) => {
           console.log('UPDATE');
           console.log(data);
-          console.log(data.jobId);
-          setJobDetails(data?.job);
+          console.log(data.data);
+          setJobDetails(data.data.job);
         })
         .catch((err) => console.log(err));
     }
@@ -158,22 +158,32 @@ const Addjob = () => {
     if (!hasError) {
       console.log(JSON.stringify(jobDetails));
       try {
-        const url = jobIdToUpdate
+        const Url = jobIdToUpdate
           ? `http://localhost:5000/updatejob/${jobIdToUpdate}`
           : 'http://localhost:5000/addjob';
 
+        console.log(token);
         const config = {
           method: jobIdToUpdate ? 'PUT' : 'POST',
+          url: Url,
           headers: {
-            Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
+            Authorization: `Bearer ${localStorage.getItem('authtoken')}`,
           },
-          body: JSON.stringify(jobDetails),
+
+          data: jobDetails,
         };
 
-        const response = await axios(url, config);
-        console.log(config);
-        console.log(response);
+        if (token) {
+          axios(config)
+            .then((res) => console.log(res.data))
+            .catch((err) => console.log(err.data));
+        } else {
+          console.log('Token is not defined.');
+        }
+        console.log(token);
+        console.log(config.headers);
+        navigate('/jobs');
         if (!jobIdToUpdate) {
           setJobDetails(initalJobDetails);
         }
