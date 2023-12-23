@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/NirajSrivastava18/JobListing#readme",
   "dependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
   }
 }
