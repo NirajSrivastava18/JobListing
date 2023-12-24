@@ -21,11 +21,10 @@ app.get('/', (req, res) => {
   res.json({ time: time, app: 'Job-Listing-server', state: 'active' });
 });
 
-app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '/client/build')));
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, '/client/build/index.html'));
   });
 }
 
