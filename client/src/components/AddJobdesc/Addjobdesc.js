@@ -98,7 +98,7 @@ const Addjob = () => {
     if (jobIdToUpdate) {
       console.log(jobIdToUpdate);
       axios
-        .get(`http://localhost:5000/job/${jobIdToUpdate}`)
+        .get(`https://joblisting-h5hr.onrender.com/job/${jobIdToUpdate}`)
         .then((data) => {
           console.log('UPDATE');
           console.log(data);
@@ -159,8 +159,8 @@ const Addjob = () => {
       console.log(JSON.stringify(jobDetails));
       try {
         const Url = jobIdToUpdate
-          ? `http://localhost:5000/updatejob/${jobIdToUpdate}`
-          : 'http://localhost:5000/addjob';
+          ? `https://joblisting-h5hr.onrender.com/updatejob/${jobIdToUpdate}`
+          : 'https://joblisting-h5hr.onrender.com/addjob';
 
         console.log(token);
         const config = {

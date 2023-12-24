@@ -37,7 +37,7 @@ const Details = () => {
   useEffect(() => {
     try {
       axios
-        .get(`http://localhost:5000/job/${id}`)
+        .get(`https://joblisting-h5hr.onrender.com/job/${id}`)
         .then((res) => {
           setJob(res.data.job);
           console.log(res);

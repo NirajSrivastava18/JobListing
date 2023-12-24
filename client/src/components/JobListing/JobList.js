@@ -67,7 +67,7 @@ const JobList = () => {
     console.log(searchQuery);
 
     axios
-      .get(`http://localhost:5000/job?${searchQuery}`)
+      .get(`https://joblisting-h5hr.onrender.com/job?${searchQuery}`)
       .then((data) => {
         setJobs(data.data.jobs);
       })

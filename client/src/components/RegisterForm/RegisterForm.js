@@ -40,7 +40,7 @@ const RegisterForm = () => {
           },
         };
         const data = await axios.post(
-          'http://localhost:5000/signup',
+          'https://joblisting-h5hr.onrender.com/signup',
           userDetails,
           config
         );
