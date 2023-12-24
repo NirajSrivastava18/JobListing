@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "client": "npm run start --prefix client",
-    "start": "cd ../server && nodemon index.js",
+    "start": "nodemon index.js",
     "app": "concurrently npm \"npm run start\" \"npm run client\"",
     "build": "cd ../client && npm install && npm run build "
   },
