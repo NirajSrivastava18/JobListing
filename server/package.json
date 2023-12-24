@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "client": "npm run start --prefix client",
     "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "app": "concurrently npm \"npm run start\" \"npm run client\"",
+    "build": "cd ../client && npm install && npm run build "
   },
   "keywords": [],
   "author": "",
