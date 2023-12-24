@@ -12,7 +12,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({ origin: 'job-listing-7dgk534oh-nirajsrivastava18.vercel.app' }));
 app.use('/', userRoute);
 app.use('/', jobRoute);
 
@@ -22,9 +22,9 @@ app.get('/', (req, res) => {
 });
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '/client/build')));
+  app.use(express.static(path.join(__dirname, '../client/build')));
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'cd ../client/build/index.html'));
+    res.sendFile(path.join(__dirname, cd, ' ../client/build/index.html'));
   });
 }
 
